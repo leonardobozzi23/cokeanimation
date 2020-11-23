@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Raleway:wght@100;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: #EB68B040;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all .9s ease-in-out;
+}
+
+#check {
+    display: none;
+}
+
+.container img{
+    width: 200px;
+    cursor: pointer;
+    margin: 25px;
+    transition: all .9s ease-in-out;
+}
+#lata{
+    filter: blur(4px);
+
+}
+#check:checked ~ * #lata {
+    width: 400px;
+    filter: blur(0);
+
+}
+#check:checked ~ * #garrafa {
+    width: 100px;
+    filter: blur(4px);
+}
+
+#check:checked ~ #container{
+    background: #523444;
+}
+
+.container .text{
+    font-family: sans-serif;
+    width: 300px;
+    padding: 10px;
+}
+.container .text h1{
+    margin: 10px 0 5px;
+    font-family: 'PT Serif', serif;
+}
+
+.container .text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+
+}
+#lata-text,
+#garrafa-text{
+    transition: all 0.9s ease-in-out;
+}
+
+#garrafa-text{
+    animation: transicao-fonte .9s ease-in-out;
+}
+
+.container .text #lata-text{
+    display: none;
+}
+
+#check:checked ~ * #lata-text{
+    display: block;
+    color: #dededc;
+    font-weight: 100;
+}
+#check:checked ~ * #garrafa-text{
+    display: none;
+}
+
+
+@keyframes transicao-fonte{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
